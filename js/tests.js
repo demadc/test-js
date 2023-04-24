@@ -1,9 +1,8 @@
 
 
-/*НАПИШІТЬ ПРОГРАМУ , ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ,
-І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
-*/
-/*
+
+// Задача 6_'через введення повної назви місяця'
+
 const monthBirth = prompt("В якому місяці ви народилися?").toLowerCase;
 let season;
 
@@ -48,11 +47,9 @@ switch (monthBirth) {
         console.log('Такого місяця не існує');
         break;
 }
-*/
-
 //Konspekt
 
-const clients = ["Mango", "Poly", "Ajax", "Dynamo"];
+/* const clients = ["Mango", "Poly", "Ajax", "Dynamo"];
 const lastElementIndex = clients.length - 1;
 
 clients[0] = 'Avacado'
@@ -60,3 +57,5 @@ clients[1] = 'Katty'
 console.log(clients[0], clients[1]);
 console.log(lastElementIndex); // 2
 console.log(clients[lastElementIndex]); // "Ajax"
+
+*/
