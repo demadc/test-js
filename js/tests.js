@@ -3,7 +3,7 @@
 
 // Задача 6_'через введення повної назви місяця'
 
-const monthBirth = prompt("В якому місяці ви народилися?").toLowerCase;
+const monthBirth = prompt("В якому місяці ви народилися?").toLowerCase();
 let season;
 
 switch (monthBirth) {
