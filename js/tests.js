@@ -1029,3 +1029,57 @@ const pizzaPalace = {
   */
 
   
+// Module 4_autocheck_13
+
+//ver_1
+/*
+  function changeEven(numbers, value) {
+    // Change code below this line
+    const newArr = [];
+  
+    numbers.forEach(number => {
+      if (number % 2 === 0) {
+        newArr.push(number + value)
+        return newArr;
+
+      } else {
+        return number;
+      }
+      
+    });
+    // Change code above this line
+  }
+*/
+/*
+  //ver_2_accepted via autocheck
+  function changeEven(numbers, value) {
+    const newNumbers = numbers.map((number) => {
+      if (number % 2 === 0) {
+        return number + value;
+      } else {
+        return number;
+      }
+    });
+  
+    return newNumbers;
+  }
+*/
+  //ver_3
+
+  function changeEven(numbers, value) {
+    // Change code below this line
+    const newArr = [];
+  
+    numbers.forEach(number => {
+      if (numbers[i] % 2 === 0) {
+        newArr.push(number + value)
+       return newArr;
+
+      } else {
+        return number;
+      }
+      
+    });
+  
+    // Change code above this line
+  }
