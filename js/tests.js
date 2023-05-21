@@ -1,4 +1,4 @@
-
+"use strict";
 
 
 // Задача 6_'через введення повної назви місяця'
@@ -1033,53 +1033,186 @@ const pizzaPalace = {
 
 //ver_1
 /*
-  function changeEven(numbers, value) {
+ function changeEven(numbers, value) {
     // Change code below this line
     const newArr = [];
   
     numbers.forEach(number => {
       if (number % 2 === 0) {
-        newArr.push(number + value)
-        return newArr;
-
+        newEven.push(number + value);
+        
       } else {
-        return number;
+        newEven.push(number);
       }
-      
+       
     });
+       return newEven;
     // Change code above this line
   }
+
+  console.log(changeEven([5, 17, 10, 21, 8, 4, 2, 9], 3));
 */
+
+
+
+// Module 4_autocheck_17
+
 /*
-  //ver_2_accepted via autocheck
-  function changeEven(numbers, value) {
-    const newNumbers = numbers.map((number) => {
-      if (number % 2 === 0) {
-        return number + value;
-      } else {
-        return number;
-      }
-    });
-  
-    return newNumbers;
-  }
+// Change code below this line
+const getUserNames = users => 
+    users.map(user => user.name);
+    
+  // Change code above this line
 */
-  //ver_3
 
-  function changeEven(numbers, value) {
-    // Change code below this line
-    const newArr = [];
-  
-    numbers.forEach(number => {
-      if (numbers[i] % 2 === 0) {
-        newArr.push(number + value)
-       return newArr;
+  // Module 4_autocheck_18
 
-      } else {
-        return number;
-      }
-      
-    });
+// Initial task:
+
+/*
+// Change code below this line
+const getUserEmails = users => {
+    
+
+};
+// Change code above this line
+*/
+
+// Task solution: 
+/*
+const getUserEmails = users => users.map(user => user.email);
+*/
+
+
+// Module 4_autocheck_20
+/*
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+// Change code below this line
+const allGenres = books.flatMap((book) => book.genres);
+const uniqueGenres = allGenres.filter((books, idx, arr) => 
+arr.indexOf(books) === idx);
+*/
+
+
+// Module 4_autocheck_25
+/*
+//ver_1_DONE
+const getFriends = (users) => {
+   const allFriends = users.flatMap(user => user.friends);
+  const uniqFriends = allFriends.filter((user, idx, arr) => 
+  arr.indexOf(user) === idx);
   
-    // Change code above this line
-  }
+  return uniqFriends;
+};
+
+// ver_2_DONE
+const getFriends = users => users.flatMap(user => 
+  user.friends).filter((friend, idx, arr) => arr.indexOf(friend) === idx);
+  */
+
+
+// Module 4_autocheck_35
+
+// ver_1
+/*
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+// Change code below this line
+
+const totalAveragePlaytimePerGame = players.reduce ((acc, player, idx, arr) 
+=> {
+  return acc + player.playtime / player.gamesPlayed;
+}, 0);
+*/
+
+// ver_2
+/*
+  const players = [
+  { name: "John", playtime: 120, gamesPlayed: 5 },
+  { name: "Alice", playtime: 90, gamesPlayed: 3 },
+  { name: "Bob", playtime: 180, gamesPlayed: 7 },
+];
+
+// Використання методу reduce() для розрахунку середнього часу та отримання загальної суми
+const { totalPlaytime, averagePlaytime } = players.reduce(
+  (accumulator, player) => {
+    const { playtime, gamesPlayed } = player;
+
+    accumulator.totalPlaytime += playtime; // Додавання часу гри до загальної суми
+    accumulator.averagePlaytime += playtime / gamesPlayed; // Додавання середнього часу гри до загальної суми середніх
+
+    return accumulator;
+  },
+  { totalPlaytime: 0, averagePlaytime: 0 }
+);
+
+console.log(totalPlaytime); // Загальна сума часу
+console.log(averagePlaytime); // Середній час
+
+console.log(totalAveragePlaytimePerGame);
+*/
+
+
+// Module 4_autocheck_36
+/*
+const calculateTotalBalance = (users) => {
+  return users.reduce((acc, user) => {
+    return acc + user.balance;
+  }, 0);
+};
+*/
+// Module 4_autocheck_47
+
+//Доповни функцію getSortedFriends(users) таким чином, 
+//щоб вона повертала масив унікальних імен друзів (властивість friends), 
+//відсортований за алфавітом.
+/*
+const getSortedFriends = users => {
+   return users.flatMap((user, idx, arr) => user.friends)
+  .filter((user, idx, arr) => arr.indexOf(user) === idx).sort();
+};
+*/
+
+
+// Module 4_autocheck_48
+/*
+Доповни функцію getTotalBalanceByGender(users, gender) таким чином, 
+щоб вона повертала загальний баланс користувачів (властивість balance), 
+стать яких (властивість gender) збігається зі значенням параметра gender.
+*/
+
+// Рішення
+//У цьому коді ми:
+//Використовуємо метод filter() для фільтрації користувачів за статтю.
+//Використовуємо метод reduce() для обчислення загального балансу користувачів.
+/*
+const getTotalBalanceByGender = (users, gender) => {
+  const totalBalance = users
+    .filter((user) => user.gender === gender) // Фільтрація користувачів за статтю
+    .reduce((sum, user) => sum + parseFloat(user.balance), 0); // Обчислення загального балансу
+
+  return totalBalance;
+};
+*/
+
+
