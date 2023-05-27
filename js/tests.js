@@ -1216,3 +1216,203 @@ const getTotalBalanceByGender = (users, gender) => {
 */
 
 
+
+// TASKS for INTERVIEW #f34336 
+/*
+// ЗАДАЧА 1
+// 1) Напишіть ф - ю конструктор яка створює обєкт person з такимим ключами:
+// const Person = {
+//   firstName,
+//   lastName,
+//   age,
+//   gender,
+//   interest,
+//   bio() {
+//     // виводить рядок Привіт {імя} мені {вік} років. Мені подобається {інтерес}
+//   },
+//   greeting() {
+//     // Привіт, я {імя}
+//   },
+// };
+
+// function Person({ firstName, lastName, age, gender, interest }) {
+  
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+//   this.gender = gender;
+//   this.interest = interest;
+// Person.prototype.bio = function() {
+//    console.log(`Привіт ${this.firstName} мені ${this.age} років. Мені подобається  ${this.interest}`)
+// }
+  
+//   Person.prototype.greeting = function() {
+//   console.log(`Привіт, я ${this.firstName}`)
+//   }
+ 
+//   }
+
+// const newPerson = new Person({ firstName: 'Pavlo', lastName: "Smit", age: '40', gender: 'men', interest: 'book' });
+
+// console.log(newPerson);
+
+// ЗАДАЧА 2
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+class User {
+  constructor({ username, age, numberOfPosts }) { 
+    this.username = username;
+    this.age = age;
+    this.numberOfPosts = numberOfPosts;
+
+  }
+  getInfo() { 
+    return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`
+  } //  під час прописування ф-ї в КЛАСІ, вона одразу автоматично(під капотом), буде прописана в ПРОТОТИП  
+
+getInfo2 = () => { 
+    return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`
+  } // стрілочна функція не буде автоматично прописана як функція в прототипі, вона буде в середені класу,
+  таким чином, не треба використовувати => ф-ї в КЛАСАХ!
+
+}
+const newUser = new User({ username: 'Pavel', age: 25, numberOfPosts: 25 });
+console.log(newUser);
+*/
+
+/*const Person = {
+  firstName,
+    lastName,
+    age,
+    gender,
+   interest,
+   bio() {
+      // виводить рядок Привіт {імя} мені {вік} років. Мені подобається {інтерес}
+   },
+   greeting() {
+     // Привіт, я {імя}
+   },
+ };
+  */
+
+ /*
+ function Person({ firstName, lastName, age, gender, interest }) {
+    
+   this.firstName = firstName;
+   this.lastName = lastName;
+   this.age = age;
+   this.gender = gender;
+   this.interest = interest;
+  
+ // при використанні ф-ї конструктор, ф-я яка прописана як в прикладі, через THIS, буде прописана не в ПРОТОТИПІ,
+ // а безпосередньо в тілі ф-ї КОНСТРУКТОР. На співбесідах часто простсять прописати ф-ї в Прототипі, таким чином,
+ // потрібно вручну прописати через  //Person.prototype.bio = function(), щоб ф-я bio відобразилася в ПРОТО!!!
+
+ this.bio = function() { 
+    console.log(`Привіт ${this.firstName} мені ${this.age} років. Мені подобається  ${this.interest}`)
+ }
+    
+   this.greeting = function() {  //Person.prototype.greeting = function()
+   console.log(`Привіт, я ${this.firstName}`)
+   }
+   
+  }
+  
+ const newPerson = new Person({ firstName: 'Pavlo', lastName: "Smit", age: '40', gender: 'men', interest: 'book' });
+  
+ console.log(newPerson);
+ */
+
+
+ // Module 5_autocheck_11
+ /*
+ class StringBuilder {
+  constructor(initialValue) {
+    this.value = initialValue;
+  }
+  getValue() {
+    return this.value;
+  }
+  padEnd(str) {
+    this.value += str;
+  }
+  padStart(str) {
+    this.value = str + this.value;
+  }
+  padBoth(str) {
+    this.value = str + this.value + str;
+  }
+  
+}
+
+
+// Change code above this line
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
+
+*/
+
+/*
+class Car {
+  static #MAX_PRICE = 50000;
+  
+  // Change code below this line
+  
+  static checkPrice (price) {
+
+    if (price > Car.#MAX_PRICE) {
+      return 'Error! Price exceeds the maximum.';
+    }
+    return "Success! Price is within acceptable limits";
+  }
+  // Change code above this line
+  
+  constructor({ price }) {
+    this.price = price;
+  }
+}
+const audi = new Car({ price: 36000 });
+const bmw = new Car({ price: 64000 });
+
+console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+*/
+
+
+// Question for Mentor #f34336 - DONE
+/*
+const max = 100;
+const min = 20;
+
+for (let i = min; i>=min && i<=max; i+=1) {
+  if (i%5 === 0) OR if(!(i%5)) {
+console.log(i);
+  }
+}
+*/
+
+// TASK for INTERVIEW #f34336 
+// Напиши скрипт сортування масиву РЯДКІВ в алфавітному порядку, за першою літерою елемента.
+
+const langs = ['cphyton', 'bjavascript', 'ac++', 'haskel', 'php', 'ruby'];
+const arr = [];
+for (let i = 0; i < langs.length; i+=0) {
+  if (langs[0] > langs[i]){
+    const result = langs.splice(i, 1)[0];
+    langs.unshift(result)
+  }
+} 
+console.log(result);
+
