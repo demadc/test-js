@@ -1403,9 +1403,10 @@ console.log(i);
 }
 */
 
-// TASK for INTERVIEW #f34336 
+// TASK for INTERVIEW #f34336 - ASK MENTOR 
 // Напиши скрипт сортування масиву РЯДКІВ в алфавітному порядку, за першою літерою елемента.
 
+/*
 const langs = ['cphyton', 'bjavascript', 'ac++', 'haskel', 'php', 'ruby'];
 const arr = [];
 for (let i = 0; i < langs.length; i+=0) {
@@ -1415,4 +1416,16 @@ for (let i = 0; i < langs.length; i+=0) {
   }
 } 
 console.log(result);
+*/
 
+/*
+const numbers = [2, 17, 21, 8, 10, 5, 4, 1, 9, -14];
+let min = numbers[0];
+for (let num of numbers) {
+  if (num < min) {
+    min = num;
+  }
+}
+console.log(min);
+console.log(numbers);
+*/
