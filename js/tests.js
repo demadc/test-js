@@ -1436,7 +1436,7 @@ console.log(numbers);
 // 2.1НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
 // html/
 
-
+/*
 const refs = {
   price:document.querySelector('#price'),
   quantity: document.querySelector('#quantity'),
@@ -1473,3 +1473,33 @@ function quantity () {
 }
 
 refs.quantity.addEventListener('input', quantity);
+*/
+
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  return records;
+}
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+console.log(updateRecords);
